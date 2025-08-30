@@ -1,0 +1,351 @@
+/* Main window styling */
+.main-window {
+    font-family: 'Cantarell', 'Sans', 'Arial', sans-serif;
+}
+
+.main-container {
+    /* Let the system theme handle background */
+}
+
+/* Header styling */
+.header {
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+    border-radius: 24px;
+    padding: 8px 16px;
+}
+
+.search-icon {
+    opacity: 0.6;
+    margin-right: 8px;
+}
+
+.search-entry {
+    background: none;
+    border: none;
+    box-shadow: none;
+    font-size: 15px;
+}
+
+.search-entry:focus {
+    outline: none;
+}
+
+.search-button, .refresh-button {
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-weight: 500;
+    transition: all 200ms ease;
+}
+
+/* Sidebar styling */
+.sidebar {
+    border-right: 1px solid;
+}
+
+.sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid;
+}
+
+.sidebar-logo {
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.sidebar-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.sidebar-separator {
+    /* System theme will handle color */
+}
+
+.sidebar-section-title {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.7;
+}
+
+.category-button {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 200ms ease;
+}
+
+.category-button:hover {
+    /* Let the system theme handle hover */
+}
+
+.category-button-content {
+    opacity: 0.8;
+}
+
+.category-icon {
+    opacity: 0.6;
+}
+
+.category-label {
+    font-weight: 500;
+}
+
+.sidebar-bottom-button {
+    margin-top: auto;
+}
+
+/* Tab styling */
+.main-tabs {
+    background-color: transparent;
+}
+
+.main-tabs > header {
+    background: none;
+    border-bottom: 1px solid;
+    margin: 0 20px;
+}
+
+.main-tabs > header > tabs > tab {
+    padding: 12px 24px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    transition: all 200ms ease;
+}
+
+.main-tabs > header > tabs > tab:hover {
+    /* Let the system theme handle hover */
+}
+
+.main-tabs > header > tabs > tab:checked {
+    border-bottom-color: currentColor;
+    font-weight: 500;
+}
+
+.main-tabs > header > tabs > tab label {
+    font-weight: 500;
+}
+
+/* App grid container */
+.app-grid-container {
+    background-color: transparent;
+}
+
+/* App grid styling */
+.app-grid {
+    background-color: transparent;
+}
+
+/* App card styling - GNOME-like */
+.app-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(0);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.app-card-hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+}
+
+.app-card-enter {
+    animation: cardEnter 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes cardEnter {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.app-card-exit {
+    animation: cardExit 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes cardExit {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+.app-icon-container {
+    margin-bottom: 16px;
+}
+
+.app-icon {
+    border-radius: 12px;
+}
+
+.app-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.app-description {
+    font-size: 14px;
+    margin-bottom: 12px;
+    opacity: 0.7;
+}
+
+.app-source-container {
+    margin-bottom: 16px;
+}
+
+/* Source badges - use system theme colors */
+.app-source-flatpak {
+    background-color: #4285f4;
+    color: white;
+    border-radius: 12px;
+    padding: 4px 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.app-source-native {
+    background-color: #34a853;
+    color: white;
+    border-radius: 12px;
+    padding: 4px 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.app-source-biglinux {
+    background-color: #fbbc04;
+    color: white;
+    border-radius: 12px;
+    padding: 4px 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.app-source-aur {
+    background-color: #ea4335;
+    color: white;
+    border-radius: 12px;
+    padding: 4px 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* App buttons - use system theme colors */
+.app-button-install {
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-weight: 500;
+    transition: all 200ms ease;
+}
+
+.app-button-remove {
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-weight: 500;
+    transition: all 200ms ease;
+}
+
+.app-button-installing, .app-button-removing {
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+/* Loading container */
+.loading-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.loading-spinner {
+    /* Let the system theme handle color */
+}
+
+.loading-label {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Empty state */
+.empty-state {
+    padding: 40px;
+    text-align: center;
+}
+
+.empty-state-icon {
+    opacity: 0.3;
+    margin-bottom: 16px;
+}
+
+.empty-state-label {
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+/* Toast notifications - use system theme colors */
+.toast-success, .toast-info {
+    background-color: white;
+    border-radius: 24px;
+    padding: 12px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.toast-success {
+    border-left: 4px solid;
+}
+
+.toast-info {
+    border-left: 4px solid;
+}
+
+.toast-label {
+    font-weight: 500;
+}
+
+/* Error dialog - use system theme colors */
+.error-dialog {
+    font-family: 'Cantarell', 'Sans', 'Arial', sans-serif;
+}
+
+.error-dialog label {
+    font-weight: 500;
+}
+
+.error-dialog button {
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-weight: 500;
+}
